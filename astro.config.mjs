@@ -4,6 +4,6 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
     integrations: [icon()],
-    site: 'https://tu-usuario.github.io',
-    base: '/nombre-de-tu-repo',
+    site: 'https://odonML.github.io',
+    base: '/octo-say-simulator',
 });
