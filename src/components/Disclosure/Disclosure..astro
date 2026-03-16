@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon/components";
+
+// props
+const { id, disabled=true, title = "titulo", content = "Aquí va todo el contenido que estaba oculto.", time=2} = Astro.props;
+---
+
+<details  class:list={['log-section', { 'is-disabled': disabled }]}>
+    <summary >
+        <div class="log-title">
+            <Icon name="octicon:chevron-right-24" class="arrow-icon" />
+            <Icon name="octicon:check-circle-fill-24" />
+            <p>{title}</p>
+        </div>
+        <p>{time}s</p>
+    </summary>
+    <div class="long-container">
+        <pre id={id} class="content" set:text={content}></pre>
+    </div>
+</details>

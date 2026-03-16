@@ -1,0 +1,9 @@
+---
+const { url, color = "green", text = "Repository" } = Astro.props;
+---
+
+<a href={url} target="_blank">
+    <button class={`custom-btn border-btn-${color} border-btn-color-${color}`}>
+        {text}
+    </button>
+</a>

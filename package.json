@@ -1,5 +1,5 @@
 {
-  "name": "octo-simulator",
+  "name": "octo-say-simulator",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -11,7 +11,10 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^6.0.4"
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/octicon": "^1.2.21",
+    "astro": "^6.0.4",
+    "astro-icon": "^1.1.5"
   }
 }

@@ -1,11 +1,77 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from "../components/Header/Header.astro";
+import Disclosure from "../components/Disclosure/Disclosure..astro";
+import CustomButton from "../components/Custom-Button/Custom-Button.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<div class="octo-say-container">
+		<div class="octo-say-description">
+			<h1>Octo-Say 🐙💬</h1>
+			<p class="description">
+				Octo-Say is a simple GitHub Action created to help developers
+				learn automation in a fun way. It works like a "Hello World" but
+				with a creative touch.
+			</p>
+			<div class="buttons-presentation">
+				<CustomButton
+					color="gray"
+					text="odonML"
+					url="https://github.com/odonML"
+				/>
+				<CustomButton url="https://github.com/odonML/octo-say" />
+				<CustomButton
+					color="yellow"
+					text="Action"
+					url="https://github.com/marketplace/actions/octosay"
+				/>
+			</div>
+			<p class="instructions">
+				The Octocat will be printed once you send a message! Type
+				something in the input and hit PLAY!!!
+			</p>
+		</div>
+		<div class="octo-say-demostration">
+			<pre>
+	       MMM.           .MMM
+               MMMMMMMMMMMMMMMMMMM
+               MMMMMMMMMMMMMMMMMMM      __________
+              MMMMMMMMMMMMMMMMMMMMM    |          |
+             MMMMMMMMMMMMMMMMMMMMMMM   | octo-say |
+            MMMMMMMMMMMMMMMMMMMMMMMM   |_   ______|
+            MMMM::- -:::::::- -::MMMM    |/
+             MM~:~ 00~:::::~ 00~:~MM
+        .. MMMMM::.00:::+:::.00::MMMMM ..
+              .MM::::: ._. :::::MM.
+                 MMMM;:::::;MMMM
+          -MM        MMMMMMM
+          ^  M+     MMMMMMMMM
+              MMMMMMM MM MM MM
+                   MM MM MM MM
+                   MM MM MM MM
+                .~~MM~MM~MM~MM~~.
+             ~~~~MM:~MM~~~MM~:MM~~~~
+            ~~~~~~==~==~~~==~==~~~~~~
+             ~~~~~~==~==~==~==~~~~~~
+                 :~==~==~==~==~~
+	</pre>
+		</div>
+	</div>
+	<div class="steps-section">
+		<Header />
+		<div class="run-steps">
+			<Disclosure title="Set up job" time="2s" />
+			<Disclosure title="Send message" time="3s" />
+			<Disclosure
+				title="Print Octocat"
+				id="print-octocat"
+				content="The Octocat will be printed once you send a message! Type something in the input and hit PLAY!!!"
+				disabled={false}
+				time="4s"
+			/>
+			<Disclosure title="Complete job" time="5s" />
+		</div>
+	</div>
 </Layout>
