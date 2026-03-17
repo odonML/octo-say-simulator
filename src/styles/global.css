@@ -19,7 +19,7 @@ html,
 body {
     margin: 0;
     width: 100%;
-    height: 100%;
+    height: fit-content;
 }
 
 body {
@@ -33,7 +33,6 @@ body {
 
 /* presentation octo say */
 .octo-say-container {
-    height: 85vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -48,7 +47,7 @@ body {
 }
 
 .octo-say-description h1 {
-    font-size: 100px;
+    font-size: 90px;
 }
 
 .octo-say-description p.description {
@@ -61,12 +60,25 @@ body {
     margin-top: 24px;
     opacity: .7;
 }
+.instructions-mobile {
+    display: none;
+}
 
 .octo-say-demostration {
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
+}
+.octo-say-container:has(.buttons-presentation .border-btn-gray:hover) .octo-say-demostration {
+    color: var(--sixty-color);
+}
+.octo-say-container:has(.buttons-presentation .border-btn-yellow:hover) .octo-say-demostration {
+    color: var(--fifth-color);
+}
+.octo-say-container:has(.buttons-presentation .border-btn-green:hover) .octo-say-demostration {
+    color: var(--fourth-color);
 }
 
 .buttons-presentation {
@@ -79,6 +91,7 @@ body {
     padding: 8px 16px;
     border-radius: 8px;
     opacity: .6;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -119,8 +132,9 @@ body {
 .steps-section {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: fit-content;
     width: 100%;
+    min-height: 100vh;
     border: solid 1px var(--sixty-color);
     transition: all 0.3s ease;
 }
@@ -261,4 +275,40 @@ summary::-webkit-details-marker {
 .log-section[open] .arrow-icon {
     transform: rotate(90deg);
     color: var(--second-color);
+}
+
+@media (max-width: 1050px) {
+    .octo-say-container{
+        display: flex;
+        flex-direction: column;
+        gap:32px;
+        padding: 24px 0px;
+    }
+    .octo-say-description{
+        width: 100%;
+    }
+    .octo-say-description h1{
+        font-size: 60px;
+    }
+     .octo-say-description p.description{
+        font-size: 30px;
+    }
+    .instructions{
+        display: none;
+    }
+    .octo-say-demostration{
+        width: 100%;
+    }
+    p.instructions-mobile {
+        width: 80%;
+        display: block;
+        font-size: 20px;
+        color: var(--third-color);
+        opacity: .7;
+        padding-bottom: 24px;
+    }
+    .intruction-mobile-container{
+        display: flex;
+        justify-content: center;
+    }
 }
