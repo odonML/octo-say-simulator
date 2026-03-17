@@ -34,6 +34,7 @@ body {
 /* presentation octo say */
 .octo-say-container {
     width: 100%;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
 }
@@ -54,7 +55,7 @@ body {
     font-size: 40px;
 }
 
-.octo-say-description p.instructions {
+ p.instructions {
     font-size: 20px;
     color: var(--third-color);
     margin-top: 24px;
@@ -310,5 +311,21 @@ summary::-webkit-details-marker {
     .intruction-mobile-container{
         display: flex;
         justify-content: center;
+    }
+    #print-octocat{
+        margin-left: -80px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .octo-say-description h1{
+        font-size: 50px;
+    }
+    pre{
+        font-size: 12px;
+    }
+    .title-container{
+        display: none;
     }
 }
